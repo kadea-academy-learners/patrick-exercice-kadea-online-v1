@@ -23,6 +23,10 @@ a {
   display: flex;
   align-items: center;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
 .section {
   padding-left: 10%;
@@ -76,7 +80,8 @@ a {
   text-align: center;
 }
 .hero__btn,
-.code__btn {
+.code__btn,
+.contact__container_frm-btn {
   padding: 12px 16px;
   background-color: var(--actived);
   color: white;
@@ -92,17 +97,16 @@ a {
 
 /* option section */
 .option {
-  display: grid;
   row-gap: 76px;
-  grid-template-columns: 1fr;
+
   background-color: var(--background-bg);
   padding-top: 134px;
   padding-bottom: 134px;
   justify-items: center;
 }
 .option__article {
-  width: 322px;
-  height: 240px;
+  max-width: 322px;
+  height: auto;
   border: 1px solid var(--colors);
   border-radius: 9px;
   padding: 27px;
@@ -143,6 +147,113 @@ a {
   font-size: 18px;
   font-weight: 400;
   color: white;
+}
+/* apprentissage section */
+.apprentissage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.apprentissage__title {
+  margin-top: 140px;
+  margin-bottom: 90px;
+}
+.apprentissage__container {
+  row-gap: 71px;
+  grid-template-columns: 1fr;
+}
+.apprentissage__html,
+.apprentissage__css,
+.apprentissage__conception {
+  max-width: 325px;
+  height: 120px;
+  border-radius: 9px;
+  background-color: var(--background-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apprentissage__btn {
+  margin-top: 72px;
+  margin-bottom: 90px;
+}
+.apprentissage__btn-link {
+  color: var(--actived);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+/* section contact */
+.contact {
+  background-color: var(--background-bg);
+  padding-top: 95px;
+  padding-bottom: 46px;
+}
+.contact__title {
+  margin-bottom: 72px;
+}
+.contact__title-h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--colors);
+}
+.contact__container_frm {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 57px;
+}
+.contact__container_frm_nom,
+.contact__container_frm_email,
+.contact__container_frm_message {
+  display: flex;
+  flex-direction: column;
+}
+.contact__container_frm-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--colors);
+  margin-bottom: 13px;
+}
+.contact__container_frm-input {
+  height: 57px;
+  color: var(--background-bg);
+  border-radius: 9px;
+  outline: none;
+  border: 1px solid var(--colors);
+}
+.contact__container_frm-message {
+  height: 140px;
+  color: var(--background-bg);
+  border-radius: 9px;
+  outline: none;
+  border: 1px solid var(--colors);
+}
+.contact__container_frm-btn {
+  display: flex;
+  align-self: flex-end;
+}
+/* footer */
+.footer {
+  padding-top: 76px;
+  padding-bottom: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.footer_logo {
+  text-align: center;
+  padding: 10px;
+}
+.footer__text {
+  text-align: center;
+  margin: 10px;
+}
+.footer_social {
+  display: flex;
+  align-items: center;
+  gap: 37px;
 }
 /* @media screen and (min-width: 430px) {
 } */
