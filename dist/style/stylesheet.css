@@ -131,7 +131,7 @@ a {
 .code__img {
 }
 .code__img-img {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 .code__contenue {
   margin-top: 47px;
@@ -171,7 +171,7 @@ a {
 .apprentissage__html,
 .apprentissage__css,
 .apprentissage__conception {
-  max-width: 325px;
+  width: 325px;
   height: 120px;
   border-radius: 9px;
   background-color: var(--background-bg);
@@ -285,26 +285,90 @@ a {
   .hero__img {
     width: 378px;
   }
-  .option {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
   .option__article {
     max-width: 100%;
     height: auto;
+  }
+  /* code */
+  .code{
+    display:flex;    
+    justify-content:center;
+    align-items: center;
+  }
+  .code__contenue{
+    width: 561px;
+  }
+  .code__contenue-title-h2{
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1021px) {
   .hero__img {
     width: 443px;
   }
+  .option {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 36px;
+  }
+  .code__img-img {
+    width: 561px;
+    height: 296px;
+  }
+  /* appritissage */
+  .apprentissage__container{
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 71px;    
+  }
+  .apprentissage__html,
+.apprentissage__css,
+.apprentissage__conception {
+  width: 279px;
+  height: 120px;
+}
+.apprentissage__html-h3,.apprentissage__css-h3,.apprentissage__title-h2{
+  font-size: 16px;
+}
+  .apprentissage__btn{
+    width: 100%;
+    text-align: left;
+  }
+  .contact__container_frm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 71px;
+    
+  }
+  .contact__container_frm_nom,.contact__container_frm_email{
+   width: 46%;
+
+  }
+  .contact__container_frm_message{
+    width: 100%
+  }
+  .contact__container_frm-button{
+    display: flex;
+       
+        justify-content: flex-end;
+        width: 100%;
+  }
+  
+ 
+}
+@media screen and (min-width:1112px) {
   .code {
     display: flex;
     flex-direction: row;
     gap: 43px;
   }
 
-  .code__img-img {
-    width: 561px;
-    height: 296px;
+  .apprentissage__html,
+.apprentissage__css,
+.apprentissage__conception {
+  width: 325px;
+  height: 120px;}
+  .apprentissage__html-h3,.apprentissage__css-h3,.apprentissage__title-h2{
+    font-size: 18px;
   }
 }
