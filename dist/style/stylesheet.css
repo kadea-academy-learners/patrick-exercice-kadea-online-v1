@@ -22,6 +22,7 @@ a {
 .header {
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 .grid {
   display: grid;
@@ -50,7 +51,7 @@ a {
   align-items: center;
   gap: 36px;
 }
-.header__nav_menu-active:hover {
+.header__nav_menu-active:visited {
   color: var(--actived);
 }
 .header__nav-lik {
@@ -130,7 +131,7 @@ a {
 }
 .code_cours {
   background-color: var(--background-bg);
-  padding-top: 120px;
+  padding-top: 111px;
   padding-bottom: 91px;
   display: flex;
   flex-direction: column;
@@ -141,11 +142,15 @@ a {
 .code__img-img {
   max-width: 100%;
 }
+.code_cours--img-img {
+  max-width: 100%;
+}
 .code__contenue {
   margin-top: 47px;
   display: flex;
   /* align-items: center; */
   flex-direction: column;
+  width: 93%;
 }
 .code__contenue-title-h2 {
   font-weight: 700;
@@ -183,6 +188,9 @@ a {
   margin-top: 140px;
   margin-bottom: 90px;
 }
+.apprentissage__title-h2 {
+  text-align: center;
+}
 .apprentissage__container {
   row-gap: 71px;
   grid-template-columns: 1fr;
@@ -190,13 +198,19 @@ a {
 .apprentissage__html,
 .apprentissage__css,
 .apprentissage__conception {
-  width: 325px;
+  width: 249px;
   height: 120px;
   border-radius: 9px;
   background-color: var(--background-bg);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.apprentissage__html-h3,
+.apprentissage__css-h3,
+.apprentissage__conception-h3 {
+  font-size: 1em;
+  text-align: center;
 }
 .apprentissage__btn {
   margin-top: 72px;
@@ -280,10 +294,67 @@ a {
   align-items: center;
   gap: 37px;
 }
+@media screen and (max-width: 425px) {
+  /* .section {
+    padding-left: 7%;
+    padding-right: 7%;
+  } */
+  .header__logo--img {
+    height: 22px;
+  }
+  .header__nav_menu {
+    gap: 20px;
+  }
+  .header__nav-lik {
+    font-size: 14px;
+  }
+  .hero__section_contenu-desc,
+  .code__cours_contenue-text-desc,
+  .apprentissage__html-h3,
+  .apprentissage__css-h3,
+  .apprentissage__conception-h3,
+  .hero__btn {
+    font-size: 0.8em;
+  }
+  .hero__section-title-h1,
+  .apprentissage__title-h2,
+  .code__cours_contenue-title-h2,
+  .code__contenue-title-h2 {
+    font-size: 1.1em;
+  }
+  .footer__text p {
+    font-size: 0.8em;
+  }
+  .footer_social {
+    gap: 28px;
+  }
+  .footer_social img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 426px) {
+  .apprentissage__title-h2,
+  .code__cours_contenue-title-h2,
+  .code__contenue-title-h2 {
+    font-size: 1.1em;
+  }
+}
 @media screen and (min-width: 720px) {
   .option {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 76px;
+  }
+  .code_cours {
+    gap: 24px;
+  }
+  .code__cours-contenue {
+    width: 91%;
+  }
+  .apprentissage__title-h2,
+  .code__cours_contenue-title-h2,
+  .code__contenue-title-h2 {
+    font-size: 1.1em;
   }
 }
 
@@ -304,28 +375,32 @@ a {
   .hero__img {
     width: 378px;
   }
-  
+
   .option__article {
     max-width: 100%;
     height: auto;
   }
   /* code */
-  .code{
-    display:flex;    
-    justify-content:center;
+  .code {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  .code_cours{
-    display:flex;    
-    justify-content:center;
+  .code_cours {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
-  
-  .code__contenue{
-    width: 561px;
+
+  .code__contenue {
+    width: 61%;
   }
-  .code__contenue-title-h2{
-    font-size: 20px;
+
+  .apprentissage__title-h2,
+  .code__cours_contenue-title-h2,
+  .code__contenue-title-h2 {
+    font-size: 1.1em;
   }
 }
 @media screen and (min-width: 1021px) {
@@ -336,56 +411,104 @@ a {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 36px;
   }
+  .code {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+  }
+  .code_cours {
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+  }
+
   .code__img-img {
-    width: 561px;
-    height: 296px;
+    width: 387px;
+    height: auto;
+  }
+  .code_cours--img-img {
+    width: 48%;
+    height: auto;
+  }
+  .code__contenue {
+    width: 36%;
+  }
+  .code__cours-contenue {
+    width: 52%;
+  }
+  .code__cours_contenue-title-h2 {
+    font-size: 1.1em;
   }
   /* appritissage */
-  .apprentissage__container{
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 71px;    
+  .apprentissage__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 71px;
   }
   .apprentissage__html,
-.apprentissage__css,
-.apprentissage__conception {
-  width: 279px;
-  height: 120px;
-}
-.apprentissage__html-h3,.apprentissage__css-h3,.apprentissage__title-h2{
-  font-size: 16px;
-}
-  .apprentissage__btn{
+  .apprentissage__css,
+  .apprentissage__conception {
+    width: 245px;
+    height: 120px;
+  }
+  .apprentissage__html-h3,
+  .apprentissage__css-h3,
+  .apprentissage__conception-h3 {
+    font-size: 16px;
+  }
+  .apprentissage__btn {
     width: 100%;
     text-align: left;
   }
-  .contact__container_frm{
+  .contact__container_frm {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 71px;
-    
   }
-  .contact__container_frm_nom,.contact__container_frm_email{
-   width: 46%;
-
+  .contact__container_frm_nom,
+  .contact__container_frm_email {
+    width: 43%;
   }
-  .contact__container_frm_message{
-    width: 100%
+  .contact__container_frm_message {
+    width: 95%;
   }
-  .contact__container_frm-button{
+  .contact__container_frm-button {
     display: flex;
-       
-        justify-content: flex-end;
-        width: 100%;
+
+    justify-content: flex-end;
+    width: 94%;
   }
-  
- 
 }
-@media screen and (min-width:1112px) {
+@media screen and (min-width: 1112px) {
   .code {
     display: flex;
     flex-direction: row;
     gap: 43px;
+  }
+  .code__img-img {
+    width: 50%;
+    height: auto;
+  }
+  .code_cours--img-img {
+    width: 47%;
+    height: auto;
+  }
+  .code_cours {
+    flex-direction: row;
+    gap: 43px;
+  }
+
+  .code__contenue {
+    width: 419px;
+  }
+  .code__cours-contenue {
+    width: 52%;
+  }
+  .code__contenue-title-h2 {
+    font-size: 1.2em;
   }
   .code_cours {
     display: flex;
@@ -394,11 +517,14 @@ a {
   }
 
   .apprentissage__html,
-.apprentissage__css,
-.apprentissage__conception {
-  width: 325px;
-  height: 120px;}
-  .apprentissage__html-h3,.apprentissage__css-h3,.apprentissage__title-h2{
+  .apprentissage__css,
+  .apprentissage__conception {
+    width: 325px;
+    height: 120px;
+  }
+  .apprentissage__html-h3,
+  .apprentissage__css-h3,
+  .apprentissage__title-h2 {
     font-size: 18px;
   }
 }
